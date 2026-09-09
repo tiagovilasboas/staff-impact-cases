@@ -2,11 +2,11 @@
 
 ## Papel / período aproximado
 
-Tech Lead / Staff de sustentação N3 — última linha antes do seller. Marketplace de creators. Período aproximado: 2026 (~primeiro trimestre de operação na cadeira).
+Tech Lead / Staff de sustentação N3 - última linha antes do seller. Marketplace de creators. Período aproximado: 2026 (~primeiro trimestre de operação na cadeira).
 
 ## Contexto
 
-A squad via incidente pelo chamado. Sem ritual de aprendizagem, o mesmo padrão voltava: webhook, race, integração muda e ninguém alerta. Onboarding era lore. Eu, Tiago Montanha, precisava de um **sistema operacional** — não de heroísmo noturno.
+A squad via incidente pelo chamado. Sem ritual de aprendizagem, o mesmo padrão voltava: webhook, race, integração muda e ninguém alerta. Onboarding era lore. Eu, Tiago Montanha, precisava de um **sistema operacional** - não de heroísmo noturno.
 
 ## Problema
 
@@ -19,11 +19,11 @@ N3 sem telemetria de produto vira fila de ticket. N3 com dashboard e postmortem 
 
 ## O que eu fiz
 
-1. **Dashboard Grafana no estilo N3** — seções para integrações, filas, webhooks, jobs, saúde de push/e-mail. Uso **diário**, não slide de QBR. Versão iterada dezenas de vezes com o time.
-2. **Rito blameless** — template no espírito SRE: timeline, causa primária vs latente, evidência, ação com dono e urgência. Sem nome para punir. O kit público está em [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
-3. **Cadência** — incidente que dói seller ou dinheiro → escrita. Spike sem impacto de usuário não vira novela (gate de severidade).
-4. **Onboarding** — lista curta: acessos, ambientes, o dashboard, os três postmortems que ensinam o domínio. Meta informal: produzir em menos de uma semana, não em um mês de sombra.
-5. **Padrões sistêmicos** — extraí classes (falha silenciosa, race de webhook, lib deprecada, fix parcial em fluxo longo) e tratei como backlog de *guard rail*, não como 15 bugs isolados.
+1. **Dashboard Grafana no estilo N3** - seções para integrações, filas, webhooks, jobs, saúde de push/e-mail. Uso **diário**, não slide de QBR. Versão iterada dezenas de vezes com o time.
+2. **Rito blameless** - template no espírito SRE: timeline, causa primária vs latente, evidência, ação com dono e urgência. Sem nome para punir. O kit público está em [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
+3. **Cadência** - incidente que dói seller ou dinheiro → escrita. Spike sem impacto de usuário não vira novela (gate de severidade).
+4. **Onboarding** - lista curta: acessos, ambientes, o dashboard, os três postmortems que ensinam o domínio. Meta informal: produzir em menos de uma semana, não em um mês de sombra.
+5. **Padrões sistêmicos** - extraí classes (falha silenciosa, race de webhook, lib deprecada, fix parcial em fluxo longo) e tratei como backlog de *guard rail*, não como 15 bugs isolados.
 
 ## Resultado / métricas
 

@@ -6,7 +6,7 @@ Staff / Tech Lead de sustentação, marketplace de creators e checkout de alto v
 
 ## Contexto
 
-Quatro frontends (checkout, dois painéis de seller, shell de admin) em React/Vue, sem telemetria de browser. Infra e API já tinham métricas. O navegador — onde o botão pagar vive — era ponto cego. Eu, Tiago Montanha, tratei isso como gap de receita, não como “mais uma ferramenta”.
+Quatro frontends (checkout, dois painéis de seller, shell de admin) em React/Vue, sem telemetria de browser. Infra e API já tinham métricas. O navegador - onde o botão pagar vive - era ponto cego. Eu, Tiago Montanha, tratei isso como gap de receita, não como “mais uma ferramenta”.
 
 ## Problema
 
@@ -16,11 +16,11 @@ O custo invisível: HTTP 200 no BFF de pagamentos e TypeError no client. Convers
 
 ## O que eu fiz
 
-1. **Mapa de risco por frontend** — rotas de dinheiro e de jornada do seller primeiro; resto depois.
+1. **Mapa de risco por frontend** - rotas de dinheiro e de jornada do seller primeiro; resto depois.
 2. **SDK em produção apenas**, sampling conservador, source maps no release. Padrão que depois abri em [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path).
-3. **Tags de domínio e fluxo** (`domain`, `flow`, faixa de valor sem PII) via `withScope` — nunca `captureException` nu.
+3. **Tags de domínio e fluxo** (`domain`, `flow`, faixa de valor sem PII) via `withScope` - nunca `captureException` nu.
 4. **PII masking** em `beforeSend`, `sendDefaultPii: false`. E-mail, documento, token: fora.
-5. **Chapter de frontend** — um guia, quatro mapas, ownership por repo. Enablement: o padrão sobrevive à minha agenda.
+5. **Chapter de frontend** - um guia, quatro mapas, ownership por repo. Enablement: o padrão sobrevive à minha agenda.
 6. Complemento a Grafana/APM, não substituição. Cada camada responde uma pergunta diferente.
 
 ## Resultado / métricas
@@ -31,7 +31,7 @@ O custo invisível: HTTP 200 no BFF de pagamentos e TypeError no client. Convers
 | Visibilidade de erro de browser | Quase zero | Quatro projetos; contexto de jornada |
 | Adoção | Proposta + POC | Plataforma escolhida para FE (**resultado**) |
 | Latência de detecção | Ordem de **meses** num caso irmão (push morto) | **Meta:** &lt;24h com alerta + dashboard |
-| Taxa de incidente de integração / mês | Baseline alta (ordem de dezena) | **Alvo:** cair a um dígito baixo — não afirmo final auditado aqui |
+| Taxa de incidente de integração / mês | Baseline alta (ordem de dezena) | **Alvo:** cair a um dígito baixo - não afirmo final auditado aqui |
 | MTTR de bug de checkout no client | Horas (reprodução cega) | **Alvo:** dezenas de minutos com breadcrumb + source map |
 
 Números de “60% dos bugs antes do suporte” ou “crash-free 99,5%” são **metas de mercado / OKR**, não um before/after que eu publique como medido neste texto.
@@ -39,7 +39,7 @@ Números de “60% dos bugs antes do suporte” ou “crash-free 99,5%” são *
 ## Aprendizados Staff
 
 - Observabilidade de frontend é leverage: um padrão × quatro repos × cinco squads.
-- Tag de domínio é contrato social — sem ela o volume vira ruído e ninguém dono.
+- Tag de domínio é contrato social - sem ela o volume vira ruído e ninguém dono.
 - Enablement (chapter, guia, mapa) vale mais que o PR do SDK. O SDK sem dono vira quota queimada.
 - Separe **proposta** de **produção**. Eu vendi o gap; o time adotou; a meta de latência continua meta até o trimestre fechar o número.
 

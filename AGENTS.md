@@ -26,7 +26,8 @@ README é mapa. Sem `## Purpose` / `## Propósito`. `AGENTS.md` ≤ 80 linhas.
 
 - Não invente nomes de empregador. Não use marcas da lista em `scripts/check-anonymization.py`.
 - Não cole IDs de ticket, DSN, hostname interno, e-mail de seller, URL de wiki/ADO privado, número de PR privado.
-- Não copie o conteúdo de [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies) — só o link.
+- Não copie o conteúdo de [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies); só o link.
+- Não use em dash (U+2014). Prefira vírgula, ponto, hífen `-` ou parênteses.
 - Não commite em `main`. Abra PR.
 
 Verificar:

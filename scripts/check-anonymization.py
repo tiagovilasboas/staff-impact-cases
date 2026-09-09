@@ -50,6 +50,9 @@ def main() -> int:
     hits: list[str] = []
     for path in iter_text_files(root):
         text = open(path, encoding="utf-8").read()
+        if "\u2014" in text:
+            rel = os.path.relpath(path, root)
+            hits.append(f"{rel}: typography em-dash U+2014")
         for pattern, kind in FORBIDDEN:
             for match in re.finditer(pattern, text, flags=re.IGNORECASE):
                 rel = os.path.relpath(path, root)

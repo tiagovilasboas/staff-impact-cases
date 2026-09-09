@@ -2,13 +2,13 @@
 
 Este repositório é um **portfólio público de cases Staff** em PT-BR. Não é um log de incidentes reais com IDs, nem um dump de wiki corporativa.
 
-Leia [AGENTS.md](AGENTS.md) antes de editar. Abra PR contra `main` — não commite direto.
+Leia [AGENTS.md](AGENTS.md) antes de editar. Abra PR contra `main` - não commite direto.
 
 ## O que cabe aqui
 
 - Narrativa densa em primeira pessoa, empregador genérico, métrica honesta.
 - Ajuste de clareza, tags, ou de um **resultado** vs **meta** mal rotulado.
-- Link de inspiração em [docs/inspiracao.md](docs/inspiracao.md) — sem copiar texto de terceiros.
+- Link de inspiração em [docs/inspiracao.md](docs/inspiracao.md) - sem copiar texto de terceiros.
 
 ## O que não cabe
 

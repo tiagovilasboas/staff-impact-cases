@@ -1,6 +1,8 @@
 # Staff Impact Cases
 
-Anonymized Staff career impact cases in PT-BR. | Cases de impacto Staff anonimizados, em português do Brasil.
+Cases de impacto Staff (PT-BR), carreira anonimizada. Tiago Montanha.
+
+Anonymized Staff career impact cases in PT-BR (GitHub SEO).
 
 Maintainer: [Tiago Montanha](https://github.com/tiagovilasboas) · Staff · [`@tiagovilasboas`](https://github.com/tiagovilasboas)
 
@@ -33,16 +35,16 @@ Mapa: [`cases/INDEX.md`](cases/INDEX.md). Índice máquina: [`llms.txt`](llms.tx
 
 ## Inspiração
 
-Sou **apaixonado por estudar cases** de engenharia e frontend como ofício — decisão, evidência, trade-off. Leitura recomendada (não é autoria minha): [andrew--r/frontend-case-studies](https://github.com/andrew--r/frontend-case-studies). Como ler o catálogo externo versus estes texts: [`docs/inspiracao.md`](docs/inspiracao.md).
+Sou **apaixonado por estudar cases** de engenharia e frontend como ofício - decisão, evidência, trade-off. Leitura recomendada (não é autoria minha): [andrew--r/frontend-case-studies](https://github.com/andrew--r/frontend-case-studies). Como ler o catálogo externo versus estes textos: [`docs/inspiracao.md`](docs/inspiracao.md).
 
 ## Related
 
-Kits públicos meus — não são evidência de que estes números rodaram numa marca nomeada.
+Kits públicos meus - não são evidência de que estes números rodaram numa marca nomeada.
 
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) — golden path de erros, tracing, PII, tags
-- [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem) — template blameless, evidence-first
-- [nuxt-layered-boilerplate](https://github.com/tiagovilasboas/nuxt-layered-boilerplate) — Dependency Rule, port, BFF
-- [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies) — inspiração / leitura (terceiros)
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) - golden path de erros, tracing, PII, tags
+- [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem) - template blameless, evidence-first
+- [nuxt-layered-boilerplate](https://github.com/tiagovilasboas/nuxt-layered-boilerplate) - Dependency Rule, port, BFF
+- [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies) - inspiração / leitura (terceiros)
 
 ## Tópicos (GitHub)
 
