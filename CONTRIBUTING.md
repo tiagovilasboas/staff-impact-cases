@@ -19,12 +19,13 @@ Leia [AGENTS.md](AGENTS.md) antes de editar. Abra PR contra `main` - não commit
 ## Como editar um case
 
 1. Um arquivo em `cases/`. Atualize [cases/INDEX.md](cases/INDEX.md) e [llms.txt](llms.txt).
-2. Estrutura fixa (PT): título SEO · papel/período · contexto · problema · o que eu fiz · resultado/métricas · aprendizados Staff · tags.
+2. Estrutura fixa (PT): título SEO · papel/período · contexto · problema · o que eu fiz · resultado/métricas · aprendizados Staff · tags. Rubrica: [docs/case-rubric.md](docs/case-rubric.md).
 3. Rode:
 
 ```bash
 python3 scripts/check-anonymization.py
 python3 scripts/check-md-links.py
+python3 scripts/check-case-headings.py
 npx --yes markdownlint-cli2@0.23.2 "**/*.md"
 test "$(wc -l < AGENTS.md)" -le 80
 ```

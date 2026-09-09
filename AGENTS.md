@@ -8,8 +8,10 @@ Corpus de **cases de impacto Staff** em PT-BR, primeira pessoa, empregadores ano
 cases/INDEX.md                         mapa de leitura
 cases/*.md                             um case por arquivo
 docs/inspiracao.md                     leitura externa (link only)
+docs/case-rubric.md                    problem / constraint / decision / evidence / outcome
 scripts/check-anonymization.py         CI: nomes/IDs proibidos
 scripts/check-md-links.py              CI: links relativos
+scripts/check-case-headings.py         CI: H2 obrigatórios em cases/
 ```
 
 README é mapa. Sem `## Purpose` / `## Propósito`. `AGENTS.md` ≤ 80 linhas.
@@ -36,4 +38,5 @@ Verificar:
 test "$(wc -l < AGENTS.md)" -le 80
 python3 scripts/check-anonymization.py
 python3 scripts/check-md-links.py
+python3 scripts/check-case-headings.py
 ```
