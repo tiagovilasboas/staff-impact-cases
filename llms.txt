@@ -1,0 +1,24 @@
+# Staff Impact Cases
+
+> Public portfolio of anonymized Staff career impact cases by Tiago Montanha. Language: PT-BR. Employers generic. Metrics honest (result vs target).
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): Agent contract - do/don't, anonymization, first person
+- [cases/INDEX.md](cases/INDEX.md): Retrieval map - every case with a one-line summary
+- [README.md](README.md): Authorship, contents, related
+- [docs/inspiracao.md](docs/inspiracao.md): How to read external cases vs this repo (link only)
+
+## Cases (PT-BR, first person)
+
+- [Observabilidade frontend](cases/observabilidade-frontend.md): ~900 silent catches → Sentry em 4 fronts; tags de domínio; PII; chapter; metas de latência
+- [AppSec BFF go-live](cases/appsec-bff-go-live.md): Auditoria estilo ASVS-L2; bearer; IDOR; CORS coringa; go-live bloqueado
+- [Ops e postmortems](cases/ops-postmortems.md): Dashboard N3 diário; cultura blameless; ~15 postmortems em ~2 meses
+- [Checkout e idempotência](cases/checkout-idempotencia.md): Race checkout/webhook → vendas duplicadas; guarda Redis/janela; testes
+- [Feature flag de pagamentos](cases/feature-flag-pagamentos.md): Fix coordenado de reembolso; bucketing; kill-switch <30s
+- [Falha silenciosa de notificações](cases/falha-silenciosa-notificacoes.md): Milhares sem push ~30 dias; API deprecada; alerta + fallback
+- [GraphQL BFF para clientes](cases/graphql-bff-clientes.md): Dezenas de REST → BFF GraphQL para clientes limitados
+
+## Inspiration (link only, not authorship)
+
+- https://github.com/andrew--r/frontend-case-studies
