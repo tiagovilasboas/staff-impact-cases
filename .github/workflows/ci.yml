@@ -17,7 +17,7 @@ jobs:
       - name: Required files
         run: |
           ls LICENSE CONTRIBUTING.md AGENTS.md README.md llms.txt \
-            cases/INDEX.md docs/inspiracao.md \
+            cases/INDEX.md docs/inspiracao.md docs/case-rubric.md \
             cases/observabilidade-frontend.md \
             cases/appsec-bff-go-live.md \
             cases/ops-postmortems.md \
@@ -35,6 +35,9 @@ jobs:
 
       - name: Relative markdown links exist
         run: python3 scripts/check-md-links.py
+
+      - name: Case headings
+        run: python3 scripts/check-case-headings.py
 
       - name: Anonymization guard
         run: python3 scripts/check-anonymization.py

@@ -2,12 +2,12 @@
 
 Corpus Staff em PT-BR, primeira pessoa. Empregadores genéricos. Métricas: **resultado** (observado) vs **meta/alvo** (rotulado quando não for final medido).
 
-Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspiracao.md).
+Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspiracao.md). Rubrica (problem, constraint, decision, evidence, outcome): [docs/case-rubric.md](../docs/case-rubric.md).
 
 | # | Arquivo | Tema | Período aprox. |
 | --- | --- | --- | --- |
-| 1 | [observabilidade-frontend.md](observabilidade-frontend.md) | Sentry em 4 fronts; tags; PII; chapter | ~2026 |
-| 2 | [appsec-bff-go-live.md](appsec-bff-go-live.md) | Auditoria ASVS-L2; go-live bloqueado | ~2025-2026 |
+| 1 | [observabilidade-frontend.md](observabilidade-frontend.md) | Sentry em 4 fronts; before/after; tags; PII; chapter | ~2026 |
+| 2 | [appsec-bff-go-live.md](appsec-bff-go-live.md) | ASVS-L2; before/after; go-live bloqueado | ~2025-2026 |
 | 3 | [ops-postmortems.md](ops-postmortems.md) | Grafana N3; cultura blameless | ~2026 |
 | 4 | [checkout-idempotencia.md](checkout-idempotencia.md) | Race checkout/webhook | ~2026 |
 | 5 | [feature-flag-pagamentos.md](feature-flag-pagamentos.md) | Rollout de reembolso + kill-switch | ~2026 |

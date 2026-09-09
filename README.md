@@ -21,11 +21,11 @@ Eu, Tiago Montanha, escrevo estes cases em **primeira pessoa**. A autoria é min
 
 ## Conteúdo
 
-Mapa: [`cases/INDEX.md`](cases/INDEX.md). Índice máquina: [`llms.txt`](llms.txt).
+Mapa: [`cases/INDEX.md`](cases/INDEX.md). Rubrica Staff: [`docs/case-rubric.md`](docs/case-rubric.md). Índice máquina: [`llms.txt`](llms.txt).
 
 | Case | Uma linha |
 | --- | --- |
-| [Observabilidade frontend](cases/observabilidade-frontend.md) | ~900 catches silenciosos → Sentry em 4 fronts |
+| [Observabilidade frontend](cases/observabilidade-frontend.md) | ~900 catches → Sentry em 4 fronts; tabela antes/depois |
 | [AppSec no go-live do BFF](cases/appsec-bff-go-live.md) | ASVS-L2: bearer, IDOR, CORS; go-live bloqueado |
 | [Ops e postmortems](cases/ops-postmortems.md) | Dashboard N3 + ~15 postmortems blameless |
 | [Idempotência no checkout](cases/checkout-idempotencia.md) | Race checkout/webhook; duplicatas eliminadas |
@@ -42,9 +42,8 @@ Sou **apaixonado por estudar cases** de engenharia e frontend como ofício - dec
 Kits públicos meus - não são evidência de que estes números rodaram numa marca nomeada.
 
 - [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) - golden path de erros, tracing, PII, tags
+- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) - review AppSec: `path:line` ou silêncio
 - [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem) - template blameless, evidence-first
-- [nuxt-layered-boilerplate](https://github.com/tiagovilasboas/nuxt-layered-boilerplate) - Dependency Rule, port, BFF
-- [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies) - inspiração / leitura (terceiros)
 
 ## Tópicos (GitHub)
 
