@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: AGENTS.md line cap
+        run: test "$(wc -l < AGENTS.md)" -le 80
+
+      - name: Required files
+        run: |
+          ls LICENSE CONTRIBUTING.md AGENTS.md README.md llms.txt \
+            cases/INDEX.md docs/inspiracao.md \
+            cases/observabilidade-frontend.md \
+            cases/appsec-bff-go-live.md \
+            cases/ops-postmortems.md \
+            cases/checkout-idempotencia.md \
+            cases/feature-flag-pagamentos.md \
+            cases/falha-silenciosa-notificacoes.md \
+            cases/graphql-bff-clientes.md
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: markdownlint
+        run: npx --yes markdownlint-cli2@0.23.2 "**/*.md"
+
+      - name: Relative markdown links exist
+        run: python3 scripts/check-md-links.py
+
+      - name: Anonymization guard
+        run: python3 scripts/check-anonymization.py
