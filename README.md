@@ -28,10 +28,10 @@ Mapa: [`cases/INDEX.md`](cases/INDEX.md). Rubrica Staff: [`docs/case-rubric.md`]
 | [Observabilidade frontend](cases/observabilidade-frontend.md) | ~900 catches → Sentry em 4 fronts; tabela antes/depois |
 | [AppSec no go-live do BFF](cases/appsec-bff-go-live.md) | ASVS-L2: bearer, IDOR, CORS; go-live bloqueado |
 | [Ops e postmortems](cases/ops-postmortems.md) | Dashboard N3 + ~15 postmortems blameless |
-| [Idempotência no checkout](cases/checkout-idempotencia.md) | Race checkout/webhook; duplicatas eliminadas |
-| [Feature flag de pagamentos](cases/feature-flag-pagamentos.md) | Kill-switch &lt;30s sem redeploy |
+| [Idempotência no checkout](cases/checkout-idempotencia.md) | Race checkout/webhook; before/after; duplicatas da classe |
+| [Feature flag de pagamentos](cases/feature-flag-pagamentos.md) | Kill-switch &lt;30s; before/after; fail-closed |
 | [Falha silenciosa de push](cases/falha-silenciosa-notificacoes.md) | Milhares sem notificação ~30 dias |
-| [BFF GraphQL](cases/graphql-bff-clientes.md) | Dezenas de REST → um BFF para cliente limitado |
+| [BFF GraphQL](cases/graphql-bff-clientes.md) | Dezenas de REST → um BFF; before/after; client limitado |
 
 ## Inspiração
 
