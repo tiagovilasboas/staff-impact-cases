@@ -15,10 +15,10 @@
 - [Observabilidade frontend](cases/observabilidade-frontend.md): ~900 silent catches → Sentry em 4 fronts; before/after; tags; PII; chapter
 - [AppSec BFF go-live](cases/appsec-bff-go-live.md): ASVS-L2; bearer; IDOR; CORS; go-live blocked; before/after
 - [Ops e postmortems](cases/ops-postmortems.md): Dashboard N3 diário; cultura blameless; ~15 postmortems em ~2 meses
-- [Checkout e idempotência](cases/checkout-idempotencia.md): Race checkout/webhook → vendas duplicadas; guarda Redis/janela; testes
-- [Feature flag de pagamentos](cases/feature-flag-pagamentos.md): Fix coordenado de reembolso; bucketing; kill-switch <30s
+- [Checkout e idempotência](cases/checkout-idempotencia.md): Race checkout/webhook; before/after; guarda Redis 60s; testes
+- [Feature flag de pagamentos](cases/feature-flag-pagamentos.md): Fix coordenado de reembolso; before/after; bucketing; kill-switch <30s
 - [Falha silenciosa de notificações](cases/falha-silenciosa-notificacoes.md): Milhares sem push ~30 dias; API deprecada; alerta + fallback
-- [GraphQL BFF para clientes](cases/graphql-bff-clientes.md): Dezenas de REST → BFF GraphQL para clientes limitados
+- [GraphQL BFF para clientes](cases/graphql-bff-clientes.md): Dezenas de REST → BFF GraphQL; before/after; clientes limitados
 
 ## Inspiration (link only, not authorship)
 

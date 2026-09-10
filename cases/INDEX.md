@@ -9,10 +9,10 @@ Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspira
 | 1 | [observabilidade-frontend.md](observabilidade-frontend.md) | Sentry em 4 fronts; before/after; tags; PII; chapter | ~2026 |
 | 2 | [appsec-bff-go-live.md](appsec-bff-go-live.md) | ASVS-L2; before/after; go-live bloqueado | ~2025-2026 |
 | 3 | [ops-postmortems.md](ops-postmortems.md) | Grafana N3; cultura blameless | ~2026 |
-| 4 | [checkout-idempotencia.md](checkout-idempotencia.md) | Race checkout/webhook | ~2026 |
-| 5 | [feature-flag-pagamentos.md](feature-flag-pagamentos.md) | Rollout de reembolso + kill-switch | ~2026 |
+| 4 | [checkout-idempotencia.md](checkout-idempotencia.md) | Race checkout/webhook; before/after; guarda 60s | ~2026 |
+| 5 | [feature-flag-pagamentos.md](feature-flag-pagamentos.md) | Rollout de reembolso; before/after; kill-switch | ~2026 |
 | 6 | [falha-silenciosa-notificacoes.md](falha-silenciosa-notificacoes.md) | Push morto ~30 dias | ~2026 |
-| 7 | [graphql-bff-clientes.md](graphql-bff-clientes.md) | REST → GraphQL BFF (OTT) | ~2019-2021 |
+| 7 | [graphql-bff-clientes.md](graphql-bff-clientes.md) | REST → GraphQL BFF (OTT); before/after | ~2019-2021 |
 
 ## Como usar este INDEX
 
