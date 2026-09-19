@@ -31,7 +31,7 @@ Dinheiro no meio. Flag de marketing não serve. O caminho de reembolso já tinha
 3. **Default OFF (fail-closed)** - o deploy do código **não** muda comportamento. Ligar é decisão explícita.
 4. **Kill-switch operacional** - comando artisan (`set` / `status`) + healthcheck que expõe o estado. Sem rebuild, sem restart de pod.
 5. **Dois PRs coordenados** (API + gateway) no mesmo contrato de nome de flag. Um só lado ligado = mentira.
-6. **Docs curtos para o N3** - o que a flag faz, quem pode virar, o que observar no dashboard. Painel irmão: [ops-postmortems.md](ops-postmortems.md). Incidente que dói dinheiro segue o molde de [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
+6. **Docs curtos para o N3** - o que a flag faz, quem pode virar, o que observar no dashboard. Painel irmão: [ops-postmortems.md](ops-postmortems.md). Incidente que dói dinheiro segue o rito blameless (timeline, evidência, ação com dono).
 
 ## Resultado / métricas
 
