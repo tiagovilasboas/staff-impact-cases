@@ -13,7 +13,7 @@ docs/inspiracao.md                     leitura externa (link only)
 docs/case-rubric.md                    score: impact / depth / scope / unmeasured
 scripts/check-anonymization.py         CI: nomes/IDs proibidos
 scripts/check-md-links.py              CI: links, INDEX, anti-hub
-scripts/check-case-headings.py         CI: H2, restrição, decisão
+scripts/check-case-headings.py         CI: H2, abertura, restrição, decisão
 scripts/test_checks.py                 CI: fixtures ruins devem falhar
 ```
 

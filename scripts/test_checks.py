@@ -95,6 +95,7 @@ def main() -> int:
         expect_hit(anon.scan(tmp), "em-dash", "em-dash fixture", failures)
         expect_hit(heads.scan(tmp), "Restrição.", "thin case missing constraint", failures)
         expect_hit(heads.scan(tmp), "Antes and Depois", "thin case missing before/after", failures)
+        expect_hit(heads.scan(tmp), "opening before Problema", "thin case missing one-breath opening", failures)
         expect_hit(links.scan(tmp), "sibling-hub", "sibling URL fixture", failures)
         expect_hit(links.scan(tmp), "## Related", "Related heading fixture", failures)
         expect_hit(links.scan(tmp), "nope.md", "broken relative link", failures)

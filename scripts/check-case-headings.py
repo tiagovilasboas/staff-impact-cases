@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail if a case file is missing the required Staff headings, in order."""
+"""Fail if a case file is missing required headings, opening, or rubric markers."""
 
 from __future__ import annotations
 
@@ -21,6 +21,14 @@ MARKERS = [
     "Restrição.",
     "Decisão.",
     "Eu, Tiago Montanha",
+]
+
+OPENING_MARKERS = [
+    "**Papel.**",
+    "**Antes.**",
+    "**Depois.**",
+    "**Decisão.**",
+    "Não medido",
 ]
 
 SKIP_NAMES = {"INDEX.md"}
@@ -103,6 +111,11 @@ def scan(root: str) -> list[str]:
         for marker in MARKERS:
             if marker not in text:
                 failures.append(f"{rel}: missing {marker!r}")
+        cut = text.find("## Problema")
+        head = text[:cut] if cut >= 0 else text
+        for marker in OPENING_MARKERS:
+            if marker not in head:
+                failures.append(f"{rel}: opening before Problema missing {marker!r}")
         if not resultado_table_ok(text):
             failures.append(f"{rel}: Resultado must have a table with Antes and Depois")
         if not tags_ok(text):
