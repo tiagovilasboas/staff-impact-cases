@@ -12,8 +12,9 @@ cases/*.md                             um case por arquivo
 docs/inspiracao.md                     leitura externa (link only)
 docs/case-rubric.md                    problem / constraint / decision / evidence / outcome
 scripts/check-anonymization.py         CI: nomes/IDs proibidos
-scripts/check-md-links.py              CI: links relativos
-scripts/check-case-headings.py         CI: H2 obrigatórios em cases/
+scripts/check-md-links.py              CI: links, INDEX, anti-hub
+scripts/check-case-headings.py         CI: H2, restrição, decisão
+scripts/test_checks.py                 CI: fixtures ruins devem falhar
 ```
 
 README é mapa (tabela de cases na frente). Sem `## Purpose` / `## Propósito`. Sem `## Related` de kits irmãos. `AGENTS.md` ≤ 80 linhas.
@@ -43,4 +44,5 @@ test "$(wc -l < AGENTS.md)" -le 80
 python3 scripts/check-anonymization.py
 python3 scripts/check-md-links.py
 python3 scripts/check-case-headings.py
+python3 scripts/test_checks.py
 ```

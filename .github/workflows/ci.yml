@@ -24,7 +24,11 @@ jobs:
             cases/checkout-idempotencia.md \
             cases/feature-flag-pagamentos.md \
             cases/falha-silenciosa-notificacoes.md \
-            cases/graphql-bff-clientes.md
+            cases/graphql-bff-clientes.md \
+            scripts/check-anonymization.py \
+            scripts/check-md-links.py \
+            scripts/check-case-headings.py \
+            scripts/test_checks.py
 
       - uses: actions/setup-node@v4
         with:
@@ -41,3 +45,6 @@ jobs:
 
       - name: Anonymization guard
         run: python3 scripts/check-anonymization.py
+
+      - name: Broken fixtures must fail
+        run: python3 scripts/test_checks.py

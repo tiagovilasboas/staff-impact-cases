@@ -30,6 +30,7 @@ Leia [AGENTS.md](AGENTS.md) antes de editar. Abra PR contra `main` - não commit
 python3 scripts/check-anonymization.py
 python3 scripts/check-md-links.py
 python3 scripts/check-case-headings.py
+python3 scripts/test_checks.py
 npx --yes markdownlint-cli2@0.23.2 "**/*.md"
 test "$(wc -l < AGENTS.md)" -le 80
 ```
