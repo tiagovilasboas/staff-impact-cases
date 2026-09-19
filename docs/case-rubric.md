@@ -19,7 +19,7 @@ Frase útil (iniciativa → impacto → papel → times): *iniciei X; o custo de
 
 Projeto Staff (o que o packet pede, em público): o que eu fiz, impacto com meta clara, o que tornou complexo. Glue work (chapter, rito, onboarding) conta como impacto de org, não como vaidade de contagem. Evidência pública neste INDEX é o próprio case (ADR/RFC/postmortem em prosa). Sem wiki privada.
 
-Densidade alvo: um Staff reader pontua perto de **8/10** quando os quatro eixos aparecem e a métrica é honesta. 10/10 exigiria close-out auditado com marca - isto é portfólio público, não data room.
+Densidade alvo deste corpus: um Staff reader pontua perto de **~8.5/10** quando os quatro eixos aparecem, a abertura cabe num fôlego e a métrica é honesta (resultado vs meta/alvo). **9+** exigiria close-out auditado com marca (data room). 10/10 não é o jogo deste INDEX. Calibração: [worked example abaixo](#worked-example-observabilidade-frontend).
 
 ## Five parts (estrutura do arquivo)
 
@@ -73,4 +73,31 @@ Não cabe: wiki privada, Confluence, ADO, ticket interno. Não cabe lista de kit
 
 Autoria: Tiago Montanha · Staff · [GitHub](https://github.com/tiagovilasboas) · [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/). Empregadores: rótulos genéricos (marketplace de creators, checkout de alto volume, BFF de pagamentos, plataforma OTT). Primeira pessoa. Sem logo.
 
-Exemplos mais densos nesta rubrica: [observabilidade-frontend.md](../cases/observabilidade-frontend.md), [appsec-bff-go-live.md](../cases/appsec-bff-go-live.md).
+Exemplo pontuado (um case, quatro eixos): [worked example](#worked-example-observabilidade-frontend). Outro texto denso no mesmo bar: [appsec-bff-go-live.md](../cases/appsec-bff-go-live.md).
+
+## Worked example (observabilidade-frontend)
+
+Score de [observabilidade-frontend.md](../cases/observabilidade-frontend.md) nos **quatro eixos**. Honesto. Sem métrica inventada para fechar o número.
+
+| Axis | Score | Why this text lands here | What 9+ would need |
+| --- | --- | --- | --- |
+| **Business / org impact** | ~8.5 | Dor é receita e LGPD, não “faltava o SDK”: HTTP 200 no BFF + TypeError no botão pagar; ~900 `catch` vazios (contagem estática); seller/comprador sem stack. Chapter como glue de org (um padrão × quatro fronts). | Close-out de conversão ou crash-free **assinado** no trimestre, com marca. Este texto recusa “60% dos bugs” e “99,5% crash-free” - são OKR de mercado, não Resultado. |
+| **Technical depth** | ~8.5 | **Restrição.** explícita (4 repos, LGPD, quota, calendário). Alternativas recusadas: só APM, sampling 100%, `captureException` nu, big bang, replay sempre ligado. Contrato de tags + `beforeSend`. | `path:line` de init/máscara, auditoria de quota do vendor, dump de source map. Isso é data room, não portfólio público. |
+| **Scope (teams)** | ~8.5 | Papel no rito: **driver** do padrão, **autor** do chapter, **consultor** das squads de FE. Quatro superfícies nomeadas de forma genérica (checkout, dois painéis, admin). “Cinco squads” é ordem de grandeza, não headcount. | Organograma com nomes de time e % de adoção por repo. Anonimato correto impede isso. Não invento o percentual. |
+| **Decision + unmeasured** | ~9 | Abertura num fôlego lista o recusado **e** o que **não** se mede. Tabela Sinal / Antes / Depois / Rótulo: detecção &lt;24h, taxa de incidente e MTTR ficam **meta/alvo**. | Publicar MTTR e crash-free como **Resultado** depois do trimestre fechar, auditado. Sem esse close-out, afirmar o número seria mentira. |
+
+**Overall: ~8.5 / 10.** Os quatro eixos estão visíveis; a métrica é rotulada; o empregador é genérico. O teto não é prosa fraca. O teto é o que um INDEX público não pode carregar.
+
+**9+ é close-out auditado com marca** (data room): empregador nomeado, rates do trimestre fechados, atribuição de conversão assinada, evidência `path:line` ou ticket interno. Este repositório **não** inventa esses números para caçar 9. Um 7.5 seria o mesmo case sem abertura, sem recusas ou com OKR de mercado colado como medido.
+
+O que o case **já tem** (não acrescente precisão falsa):
+
+- ~900 catches silenciosos como **Resultado** (contagem estática + adoção)
+- Quatro projetos, tags `domain`/`flow`, máscara de PII como **Resultado**
+- Latência &lt;24h, taxa de incidente, MTTR de checkout como **meta/alvo**
+
+O que o case **recusa** com razão:
+
+- crash-free 99,5%
+- “60% dos bugs antes do suporte”
+- MTTR final em minutos como se o trimestre tivesse fechado neste texto

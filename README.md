@@ -33,6 +33,8 @@ Score o case com a [rubrica](docs/case-rubric.md). Não some PRs, linhas ou reun
 
 Frase útil: iniciativa → impacto de negócio → meu papel → times. A abertura de cada case cabe num fôlego (**Papel.** **Antes.** **Depois.** **Decisão.** **Não medido.**). Depois vem o “como”.
 
+Exemplo pontuado (um case, quatro eixos, **~8.5**; 9+ seria close-out auditado com marca): [observabilidade-frontend na rubrica](docs/case-rubric.md#worked-example-observabilidade-frontend).
+
 Empregadores genéricos. Sem ticket, DSN, host interno. Técnicas públicas (ASVS, espírito SRE) podem aparecer. Este INDEX não encaminha para um zoo de repositórios irmãos.
 
 ## Autoria

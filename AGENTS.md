@@ -24,7 +24,7 @@ README é mapa (tabela de cases na frente). Sem `## Purpose` / `## Propósito`. 
 - Escreva em **português do Brasil**, primeira pessoa (“Eu, Tiago Montanha…”).
 - Use rótulos genéricos: marketplace de creators, checkout de alto volume, BFF de pagamentos, plataforma OTT.
 - Separe **resultado observado** de **meta/alvo**. Se o número não for final medido, rotule `meta` ou `alvo`.
-- Abertura do case num fôlego: **Papel.** **Antes.** **Depois.** **Decisão.** `Não medido`. Score leverage, não volume de PR.
+- Abertura do case num fôlego: **Papel.** **Antes.** **Depois.** **Decisão.** `Não medido`. Score leverage, não volume de PR. Calibre em [docs/case-rubric.md](docs/case-rubric.md) (worked example ~8.5; 9+ é close-out auditado com marca).
 - Arredonde métricas. Prefira ordem de grandeza a precisão falsa.
 - Mantenha autoria: Maintainer Tiago Montanha · Staff · `@tiagovilasboas`.
 

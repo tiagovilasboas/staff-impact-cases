@@ -7,7 +7,7 @@
 - [AGENTS.md](AGENTS.md): Agent contract - do/don't, anonymization, first person
 - [cases/INDEX.md](cases/INDEX.md): Retrieval map - every case with a one-line summary
 - [README.md](README.md): Case table first; how to read; authorship
-- [docs/case-rubric.md](docs/case-rubric.md): Score impact, depth, scope, decision + unmeasured (not PR volume)
+- [docs/case-rubric.md](docs/case-rubric.md): Score impact, depth, scope, decision + unmeasured (not PR volume). Worked example: observabilidade-frontend ~8.5; 9+ is audited brand close-out.
 - [docs/inspiracao.md](docs/inspiracao.md): How to read external cases vs this repo (link only)
 
 ## Cases (PT-BR, first person)
