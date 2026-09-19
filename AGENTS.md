@@ -2,6 +2,8 @@
 
 Corpus de **cases de impacto Staff** em PT-BR, primeira pessoa, empregadores anonimizados. Humanos: [CONTRIBUTING.md](CONTRIBUTING.md).
 
+Este repo é **INDEX de evidência narrativa** para recrutador. Não é produto, CLI ou hub de kits.
+
 ## Layout
 
 ```text
@@ -14,7 +16,7 @@ scripts/check-md-links.py              CI: links relativos
 scripts/check-case-headings.py         CI: H2 obrigatórios em cases/
 ```
 
-README é mapa. Sem `## Purpose` / `## Propósito`. `AGENTS.md` ≤ 80 linhas.
+README é mapa (tabela de cases na frente). Sem `## Purpose` / `## Propósito`. Sem `## Related` de kits irmãos. `AGENTS.md` ≤ 80 linhas.
 
 ## Do
 
@@ -31,6 +33,8 @@ README é mapa. Sem `## Purpose` / `## Propósito`. `AGENTS.md` ≤ 80 linhas.
 - Não copie o conteúdo de [frontend-case-studies](https://github.com/andrew--r/frontend-case-studies); só o link.
 - Não use em dash (U+2014). Prefira vírgula, ponto, hífen `-` ou parênteses.
 - Não commite em `main`. Abra PR.
+- Não emoldure o repo como produto ou CLI.
+- Não adicione `## Related` no README com kits irmãos (sentry-golden-path, agentic-code-review, staff-postmortem).
 
 Verificar:
 
