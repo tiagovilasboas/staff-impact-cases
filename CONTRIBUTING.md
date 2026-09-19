@@ -22,7 +22,7 @@ Leia [AGENTS.md](AGENTS.md) antes de editar. Abra PR contra `main` - não commit
 ## Como editar um case
 
 1. Um arquivo em `cases/`. Atualize [cases/INDEX.md](cases/INDEX.md), [README.md](README.md) e [llms.txt](llms.txt).
-2. Estrutura fixa (PT): título SEO · abertura num fôlego · papel/período · contexto · problema · o que eu fiz · resultado/métricas · aprendizados Staff · tags. Rubrica: [docs/case-rubric.md](docs/case-rubric.md).
+2. Estrutura fixa (PT): título SEO · abertura num fôlego · papel/período · contexto · problema · o que eu fiz · resultado/métricas · aprendizados Staff · tags. Rubrica: [docs/case-rubric.md](docs/case-rubric.md). Calibre o score no [exemplo pontuado](docs/case-rubric.md#worked-example-observabilidade-frontend) (~8.5; não invente métrica para 9+).
 3. Abertura com **Papel.** **Antes.** **Depois.** **Decisão.** e `Não medido`. Depois **Restrição.** no contexto. Tabela antes/depois em resultado. Papel no rito: autor, driver ou consultor.
 4. Rode:
 

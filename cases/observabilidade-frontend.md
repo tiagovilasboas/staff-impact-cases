@@ -59,7 +59,7 @@ Números de “60% dos bugs antes do suporte” ou “crash-free 99,5%” são *
 - Tag de domínio é contrato social - sem ela o volume vira ruído e ninguém dono.
 - Enablement (chapter, guia, mapa) vale mais que o PR do SDK. O SDK sem dono vira quota queimada.
 - Separe **proposta** de **produção**. Eu vendi o gap; o time adotou; a meta de latência continua meta até o trimestre fechar o número.
-- Kit público não prova que estes rates rodaram numa marca. Prova o padrão que eu extraí.
+- Este INDEX não prova rates de uma marca. Prova o padrão (sampling, tags, PII, chapter) que eu extraí e o limite do que não medi.
 
 ## Tags
 

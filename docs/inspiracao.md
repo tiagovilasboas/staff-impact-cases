@@ -2,7 +2,7 @@
 
 Eu, Tiago Montanha, sou **apaixonado por estudar cases** de engenharia e frontend como ofício: decisão, trade-off, evidência, leverage. Ler bem um case alheio é treino Staff; escrever o meu sem vazar IP é o outro lado da mesma disciplina.
 
-O score mora em [docs/case-rubric.md](case-rubric.md). Aqui está a curadoria (não é autoria minha). Não copio os textos; extraio o craft.
+O score mora em [docs/case-rubric.md](case-rubric.md). Calibração: [exemplo pontuado (~8.5)](case-rubric.md#worked-example-observabilidade-frontend). Aqui está a curadoria (não é autoria minha). Não copio os textos; extraio o craft.
 
 ## Craft de promo packet (o que eu extraio)
 
