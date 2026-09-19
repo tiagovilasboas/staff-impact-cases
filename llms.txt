@@ -1,23 +1,23 @@
 # Staff Impact Cases
 
-> Public portfolio of anonymized Staff career impact cases by Tiago Montanha. Language: PT-BR. Employers generic. Metrics honest (result vs target).
+> Public INDEX of anonymized Staff career impact cases by Tiago Montanha. Language: PT-BR. Employers generic. Metrics honest (result vs target). Narrative evidence, not a product.
 
 ## Start here
 
 - [AGENTS.md](AGENTS.md): Agent contract - do/don't, anonymization, first person
 - [cases/INDEX.md](cases/INDEX.md): Retrieval map - every case with a one-line summary
-- [README.md](README.md): Authorship, contents, related
-- [docs/case-rubric.md](docs/case-rubric.md): Staff-grade parts - problem, constraint, decision, evidence, outcome
+- [README.md](README.md): Case table first; how to read; authorship
+- [docs/case-rubric.md](docs/case-rubric.md): Score impact, depth, scope, decision + unmeasured (not PR volume)
 - [docs/inspiracao.md](docs/inspiracao.md): How to read external cases vs this repo (link only)
 
 ## Cases (PT-BR, first person)
 
 - [Observabilidade frontend](cases/observabilidade-frontend.md): ~900 silent catches → Sentry em 4 fronts; before/after; tags; PII; chapter
 - [AppSec BFF go-live](cases/appsec-bff-go-live.md): ASVS-L2; bearer; IDOR; CORS; go-live blocked; before/after
-- [Ops e postmortems](cases/ops-postmortems.md): Dashboard N3 diário; cultura blameless; ~15 postmortems em ~2 meses
+- [Ops e postmortems](cases/ops-postmortems.md): Dashboard N3 diário; before/after; cultura blameless; ~15 postmortems em ~2 meses
 - [Checkout e idempotência](cases/checkout-idempotencia.md): Race checkout/webhook; before/after; guarda Redis 60s; testes
 - [Feature flag de pagamentos](cases/feature-flag-pagamentos.md): Fix coordenado de reembolso; before/after; bucketing; kill-switch <30s
-- [Falha silenciosa de notificações](cases/falha-silenciosa-notificacoes.md): Milhares sem push ~30 dias; API deprecada; alerta + fallback
+- [Falha silenciosa de notificações](cases/falha-silenciosa-notificacoes.md): Milhares sem push ~30 dias; before/after; API deprecada; alerta + fallback
 - [GraphQL BFF para clientes](cases/graphql-bff-clientes.md): Dezenas de REST → BFF GraphQL; before/after; clientes limitados
 
 ## Inspiration (link only, not authorship)

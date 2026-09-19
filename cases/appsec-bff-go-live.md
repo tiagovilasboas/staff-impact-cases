@@ -1,5 +1,7 @@
 # AppSec no BFF: auditoria estilo ASVS-L2 que bloqueou um go-live inseguro
 
+**Papel.** Driver do gate de go-live; autor do checklist L2 no BFF de pagamentos. **Antes.** Bearer frouxo, IDOR, CORS coringa; o calendário mandava ir. **Depois.** Go-live adiado até auth + CORS + IDOR fecharem; testes no pipeline. **Decisão.** Bloquear o ar; recusei ship-and-patch. **Não medido neste texto.** taxa de incidente de autorização; “zero achado L2” permanente. Contrafactual: superfície insegura que não foi a produção.
+
 ## Papel / período aproximado
 
 Staff com AppSec aplicada (curso de defesa cibernética em paralelo). Período aproximado: 2025-2026. Superfície: **BFF de pagamentos** na frente de um checkout de alto volume.
@@ -8,7 +10,7 @@ Staff com AppSec aplicada (curso de defesa cibernética em paralelo). Período a
 
 O BFF ia a produção como “só um aggregador”. Na prática ele autentica, agrega dados de seller/comprador e fala com o gateway. Go-live sem barra de segurança é go-live de superfície de ataque. Eu, Tiago Montanha, tratei o BFF como aplicação ASVS - não como proxy inocente.
 
-**Restrição.** Calendário de go-live já vendido. Narrativa da casa: “é só frontend no meio”. Sem selo formal da organização (eu usei [OWASP ASVS L2](https://owasp.org/www-project-application-security-verification-standard/) como barra, não como certificado interno). Sem exploit público neste repo. Achado precisa de evidência (`path:line` ou teste que falha) - o contrato que depois abri em [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review).
+**Restrição.** Calendário de go-live já vendido. Narrativa da casa: “é só frontend no meio”. Sem selo formal da organização (eu usei [OWASP ASVS L2](https://owasp.org/www-project-application-security-verification-standard/) como barra, não como certificado interno). Sem exploit público neste repo. Achado precisa de evidência (`path:line` ou teste que falha).
 
 ## Problema
 
@@ -33,7 +35,7 @@ Nenhum desses achados precisa de exploit público neste repo. O ponto Staff é o
 3. **Auth endurecida** - bearer só em `Authorization`; validação de issuer/audience/exp; recusar token no query string.
 4. **Autorização no BFF** - toda leitura/escrita de recurso financeiro checa `subject === owner` (ou papel explícito). Teste de IDOR negativo no CI.
 5. **CORS allowlist** - origens do checkout e do admin; sem coringa em ambiente com cookie/credencial.
-6. **Logs sem segredo** - token e documento fora do sink; alinhado ao masking de [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path).
+6. **Logs sem segredo** - token e documento fora do sink; alinhado ao masking de PII do case de [observabilidade-frontend.md](observabilidade-frontend.md).
 7. **Bloqueio do go-live** até os itens “bloqueia = sim” fecharem.
 8. **Testes de evidência** - contrato de header; origem recusada; IDOR 403; snapshot de headers de segurança. Review sem teste morre no próximo hotfix.
 
@@ -58,7 +60,7 @@ Não invento CVE, não publico payload, não cito host interno.
 - Bloquear go-live é ato político-técnico. Documente o achado em linguagem de risco de negócio (dinheiro, PII), não só de header.
 - Evidência = teste que falha se alguém reabrir o coringa, ou `path:line`. Review sem teste morre no próximo hotfix.
 - AppSec no Staff não é “o time de segurança depois”. É gate na mesma PR que o feature.
-- O kit de review ([agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review)) é o padrão extraído; este case é a decisão de calendário. Não mistura os dois.
+- Review sem `path:line` ou teste que falha não é gate. Este case é a decisão de calendário, não um produto de review.
 
 ## Tags
 

@@ -1,5 +1,7 @@
 # Ops N3: dashboard diário e cultura blameless de postmortem
 
+**Papel.** Driver do sistema operacional N3; autor do molde blameless (glue work: rito + onboarding). **Antes.** Incidente pelo chamado; zero escrita no trimestre; onboarding era lore. **Depois.** Dashboard diário; ~15 postmortems em ~2 meses; push morto achado no painel. **Decisão.** Ritual + painel + gate de severidade; recusei heroísmo noturno. **Não medido neste texto.** taxa de incidente da casa; “zero recorrência” eterno.
+
 ## Papel / período aproximado
 
 Tech Lead / Staff de sustentação N3 - última linha antes do seller. Marketplace de creators. Período aproximado: 2026 (~primeiro trimestre de operação na cadeira).
@@ -8,34 +10,40 @@ Tech Lead / Staff de sustentação N3 - última linha antes do seller. Marketpla
 
 A squad via incidente pelo chamado. Sem ritual de aprendizagem, o mesmo padrão voltava: webhook, race, integração muda e ninguém alerta. Onboarding era lore. Eu, Tiago Montanha, precisava de um **sistema operacional** - não de heroísmo noturno.
 
-## Problema
+**Restrição.** Calendário de sustentação não parava para um “projeto de cultura”. Sem wiki privada neste texto. Sem nomear pessoas. Spike sem impacto de seller não vira novela. O dashboard precisa caber no dia do N3, não num slide de QBR.
 
-- Sem painel único do dia: CPU verde, seller vermelho.
-- Postmortem informal (“a gente já sabe”) = conhecimento que viaja com a pessoa.
-- Zero escrita estruturada no trimestre anterior.
-- Dev novo gastava semana atrás de acesso e de “por onde começa”.
+## Problema
 
 N3 sem telemetria de produto vira fila de ticket. N3 com dashboard e postmortem vira alavanca da plataforma.
 
+| Dimensão | Antes (observado) |
+| --- | --- |
+| Painel do dia | Ausente; CPU verde, seller vermelho |
+| Postmortem | Informal (“a gente já sabe”); zero escrita no trimestre anterior |
+| Aprendizado | Viaja com a pessoa; o mesmo padrão volta |
+| Onboarding | Lore; semana atrás de acesso e de “por onde começa” |
+
 ## O que eu fiz
 
+**Decisão.** Aceitei dashboard diário + rito blameless com gate de severidade + onboarding curto. Recusei: heroísmo noturno, postmortem só depois de um “projeto de cultura”, template de 20 páginas, caça às bruxas, tour de duas horas sem artefato.
+
 1. **Dashboard Grafana no estilo N3** - seções para integrações, filas, webhooks, jobs, saúde de push/e-mail. Uso **diário**, não slide de QBR. Versão iterada dezenas de vezes com o time.
-2. **Rito blameless** - template no espírito SRE: timeline, causa primária vs latente, evidência, ação com dono e urgência. Sem nome para punir. O kit público está em [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
+2. **Rito blameless** - template no espírito SRE: timeline, causa primária vs latente, evidência, ação com dono e urgência. Sem nome para punir.
 3. **Cadência** - incidente que dói seller ou dinheiro → escrita. Spike sem impacto de usuário não vira novela (gate de severidade).
 4. **Onboarding** - lista curta: acessos, ambientes, o dashboard, os três postmortems que ensinam o domínio. Meta informal: produzir em menos de uma semana, não em um mês de sombra.
-5. **Padrões sistêmicos** - extraí classes (falha silenciosa, race de webhook, lib deprecada, fix parcial em fluxo longo) e tratei como backlog de *guard rail*, não como 15 bugs isolados.
+5. **Padrões sistêmicos** - extraí classes (falha silenciosa, race de webhook, lib deprecada, fix parcial em fluxo longo) e tratei como backlog de *guard rail*, não como 15 bugs isolados. Caso irmão de detecção: [falha-silenciosa-notificacoes.md](falha-silenciosa-notificacoes.md).
 
 ## Resultado / métricas
 
-| Sinal | Número | Rótulo |
-| --- | --- | --- |
-| Postmortems publicados | **~15 em ~2 meses** | **Resultado** (contagem de escritos) |
-| Dashboard em uso diário pelo N3 | sim | **Resultado** qualitativo |
-| Detecção do caso de push morto | via painel, não só via ticket | **Resultado** (ver [falha-silenciosa-notificacoes.md](falha-silenciosa-notificacoes.md)) |
-| Tempo até o primeiro PR útil de um recém-chegado | **Alvo:** &lt; 1 semana com o pacote de onboarding | meta operacional |
-| Recorrência da mesma classe de incidente | **Alvo:** cair após o guard rail, não após o hotfix | não afirmo zero eterno |
+| Sinal | Antes | Depois | Rótulo |
+| --- | --- | --- | --- |
+| Postmortems publicados | Zero escrita no trimestre anterior | **~15 em ~2 meses** | **Resultado** (contagem de escritos) |
+| Dashboard em uso diário pelo N3 | Incidente pelo chamado | Painel do dia (integrações, filas, webhooks) | **Resultado** qualitativo |
+| Detecção do caso de push morto | Ticket / “seller sumiu” | Via painel, não só via ticket | **Resultado** (ver [falha-silenciosa-notificacoes.md](falha-silenciosa-notificacoes.md)) |
+| Tempo até o primeiro PR útil de um recém-chegado | Ordem de um mês de sombra | **Alvo:** &lt; 1 semana com o pacote de onboarding | meta operacional |
+| Recorrência da mesma classe de incidente | Hotfix sem guard rail | **Alvo:** cair após o guard rail, não após o hotfix | não afirmo zero eterno |
 
-Quinze textos não são vaidade. São onboarding empacotado e memória institucional.
+Quinze textos não são vaidade. São onboarding empacotado e memória institucional. Não publico taxa de incidente da casa.
 
 ## Aprendizados Staff
 

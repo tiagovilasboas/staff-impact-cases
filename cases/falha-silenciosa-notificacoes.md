@@ -1,5 +1,7 @@
 # Falha silenciosa de push: milhares sem notificação por ~30 dias
 
+**Papel.** Driver e autor do fix no N3. **Antes.** Milhares (~4k) sem push ~30 dias; HTTP 200 mentia. **Depois.** Canal restaurado; ~5 testes no erro; alerta no painel. **Decisão.** Fix + alerta + fallback; recusei hotfix sem sinal. **Não medido neste texto.** meta &lt;24h ainda é meta; vendor e token ficam fora.
+
 ## Papel / período aproximado
 
 Tech Lead N3, marketplace de creators. Período aproximado: 2026.
@@ -7,6 +9,8 @@ Tech Lead N3, marketplace de creators. Período aproximado: 2026.
 ## Contexto
 
 Push é o canal de “sua venda caiu / seu saque saiu”. Quando morre sem erro, o seller acha que a plataforma sumiu. Eu, Tiago Montanha, achei o buraco no **dashboard**, não na fila de tickets - e isso importa.
+
+**Restrição.** Não nomear o vendor (lista de anonimização). Não publicar token ou e-mail de seller. Fallback não pode derrubar a venda. Calendário de N3: o canal precisa voltar sem esperar um projeto de plataforma.
 
 ## Problema
 
@@ -19,13 +23,23 @@ Uma coorte grande - **milhares** de sellers (ordem de quatro mil, arredondado) -
 
 Padrão sistêmico #1 daquele trimestre: falha silenciosa em integração externa.
 
+| Dimensão | Antes (observado) |
+| --- | --- |
+| Entrega de push | HTTP 200 no *nosso* server; seller sem notificação |
+| Coorte | Milhares (~4k arredondado), ~30 dias |
+| Alerta de entrega | Ausente |
+| Teste no caminho de falha | 0 |
+| Onde achei | Dashboard N3, não a fila de tickets |
+
 ## O que eu fiz
+
+**Decisão.** Aceitei fix no client + alerta + fallback gracioso + testes no caminho de falha. Recusei: só o hotfix do header (volta a falhar quieto), fallback sem alerta (o mesmo silêncio com nome bonito), testes só no happy path.
 
 1. **Fix no client** - header de auth correto; tratar resposta de falha; log estruturado de erro (sem PII de device token em claro além do necessário).
 2. **Fallback gracioso** - ausência de key não derruba o request de negócio; push falha, venda não. Trade-off: push pode falhar quieto se a key sumir - por isso o alerta existe.
 3. **Testes** (~5) no caminho de falha, não só no happy path.
 4. **Alertas** no APM/monitoramento de entrega do provedor (e canais irmãos: e-mail transacional).
-5. **Painel N3** - taxa de envio / erro visível no dia seguinte, não no dia 31.
+5. **Painel N3** - taxa de envio / erro visível no dia seguinte, não no dia 31. ROI do case [ops-postmortems.md](ops-postmortems.md).
 6. **Postmortem blameless** - a lição é “integração sem SLO de entrega”, não “quem esqueceu o header”.
 
 ## Resultado / métricas

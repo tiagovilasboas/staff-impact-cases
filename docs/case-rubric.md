@@ -2,9 +2,26 @@
 
 What a Staff-grade case must make explicit: **problem**, **constraint**, **decision**, **evidence**, **outcome**. Language of the cases is PT-BR; this rubric is the English/PT contract so a reviewer (human or agent) can score the text without inventing employers.
 
-Mapa de leitura: [cases/INDEX.md](../cases/INDEX.md). Como editar: [CONTRIBUTING.md](../CONTRIBUTING.md).
+This repo is narrative evidence (an INDEX), not a product. Mapa de leitura: [cases/INDEX.md](../cases/INDEX.md). Como editar: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-## Five parts
+Score **leverage**, not activity volume. A lista de PRs pessoais é sinal de sênior, não de Staff.
+
+## How to score (promo packet)
+
+| Axis | Staff-grade when | Fail when |
+| --- | --- | --- |
+| **Business / org impact** | Dinheiro, PII, seller, conversão, ou contrafactual honesto (incidente / go-live inseguro que **não** aconteceu) | “Entreguei a lib”; glue invisível sem estado antes/depois |
+| **Technical depth** | Restrição, complexidade, alternativas recusadas, rollback / risco, evidência reproduzível (teste, ADR, rito) | Tutorial da ferramenta; sem limite |
+| **Scope (teams)** | Superfícies e times nomeados de forma genérica; papel no rito: **autor**, **driver** ou **consultor** | “Liderei a migração” sem dizer quem dependia disso |
+| **Decision + unmeasured** | O que foi aceito vs recusado **e** o que este texto **não mede** (meta/alvo/desconhecido) | Número único sem rótulo; OKR de mercado como medido; preencher lacuna com métrica inventada |
+
+Frase útil (iniciativa → impacto → papel → times): *iniciei X; o custo de negócio era Y; meu papel foi driver/autor/consultor; N squads / superfícies dependiam disso.*
+
+Projeto Staff (o que o packet pede, em público): o que eu fiz, impacto com meta clara, o que tornou complexo. Glue work (chapter, rito, onboarding) conta como impacto de org, não como vaidade de contagem. Evidência pública neste INDEX é o próprio case (ADR/RFC/postmortem em prosa). Sem wiki privada.
+
+Densidade alvo: um Staff reader pontua perto de **8/10** quando os quatro eixos aparecem e a métrica é honesta. 10/10 exigiria close-out auditado com marca - isto é portfólio público, não data room.
+
+## Five parts (estrutura do arquivo)
 
 | Part | PT no case | Staff-grade when | Fail when |
 | --- | --- | --- | --- |
@@ -14,7 +31,7 @@ Mapa de leitura: [cases/INDEX.md](../cases/INDEX.md). Como editar: [CONTRIBUTING
 | **Evidence** | teste, contagem, `path:line`, rito | Outro engenheiro reproduz o sinal sem wiki privada | “A gente viu”, ticket interno, DSN, host |
 | **Outcome** | `## Resultado / métricas` | Tabela antes/depois; **resultado** vs **meta/alvo** rotulados | Número único sem rótulo; OKR de mercado como medido |
 
-Densidade alvo deste corpus: narrativa que um Staff reader pontua perto de **8/10** (todas as cinco partes visíveis, métrica honesta, empregador genérico). 10/10 exigiria close-out auditado com marca - isto é portfólio público, não data room.
+A abertura (antes de `## Problema`) tem de caber num fôlego: **Papel.** **Antes.** **Depois.** **Decisão.** **Não medido neste texto.**
 
 ## Required headings (CI)
 
@@ -28,7 +45,7 @@ Cada arquivo em `cases/*.md` (exceto `INDEX.md`) deve ter, nesta ordem:
 6. `## Aprendizados Staff`
 7. `## Tags`
 
-Check: `python3 scripts/check-case-headings.py`. Constraint e decision não são H2 extras; aparecem no texto (negrito **Restrição.** / **Decisão.** nos cases densos).
+Check: `python3 scripts/check-case-headings.py`. Constraint e decision não são H2 extras; aparecem no texto como **Restrição.** e **Decisão.** A seção de resultado precisa de tabela com colunas Antes / Depois. Primeira pessoa: `Eu, Tiago Montanha`. A abertura precisa dos rótulos **Papel.** / **Antes.** / **Depois.** / **Decisão.** / `Não medido`.
 
 ## Before / after
 
@@ -39,17 +56,18 @@ A tabela de resultado deve ter colunas que um leitor descreia:
 - Depois (estado após a decisão)
 - Rótulo: **Resultado** (observado) · **Meta** / **Alvo** (ainda não fechado) · **Qualitativo**
 
+Contrafactual vale quando o texto já tem o estado evitado (go-live bloqueado, classe de duplicata sumiu, big bang de dinheiro recusado). Não invente “N incidentes evitados” se não mediu.
+
 Arredonde. Prefira ordem de grandeza. Se o número não foi medido neste texto, escreva isso.
 
-## Cross-links (public kits only)
+## Cross-links (this corpus + public standards)
 
-Kits públicos do mesmo maintainer - padrão extraído, **não** prova de que o número rodou numa marca:
+Links que cabem aqui:
 
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) - erros, tracing, PII, tags
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) - review AppSec: `path:line` ou silêncio
-- [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem) - template blameless, evidence-first
+- Outro case deste repo, quando a classe de problema se repete (push morto e dashboard N3).
+- Padrão público de terceiros (ex.: [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/), espírito SRE de postmortem).
 
-Sem Confluence, sem wiki/ADO privado, sem ticket interno. Inspiração de terceiros: [docs/inspiracao.md](inspiracao.md) (link only).
+Não cabe: wiki privada, Confluence, ADO, ticket interno. Não cabe lista de kits irmãos do mesmo GitHub - este INDEX se lê sozinho. Craft de packet (curadoria, não autoria): [docs/inspiracao.md](inspiracao.md).
 
 ## Authorship vs anonymity
 

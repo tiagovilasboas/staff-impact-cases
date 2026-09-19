@@ -1,5 +1,7 @@
 # Observabilidade frontend: de ~900 catches silenciosos a Sentry em quatro fronts
 
+**Papel.** Driver do padrão (autor do chapter); consultor das squads de FE - quatro fronts, leverage de várias squads. **Antes.** Browser cego; ~900 catches silenciosos; PIX e upload no mesmo saco. **Depois.** Sentry em quatro projetos; tags de domínio; PII masking. **Decisão.** SDK só em produção + sampling conservador + chapter; recusei só APM e sampling 100%. **Não medido neste texto.** crash-free, “60% dos bugs”, MTTR final.
+
 ## Papel / período aproximado
 
 Staff / Tech Lead de sustentação, marketplace de creators e checkout de alto volume. Período aproximado: 2026.
@@ -29,12 +31,12 @@ O custo invisível: HTTP 200 no BFF de pagamentos e TypeError no client. Convers
 **Decisão.** Aceitei SDK só em produção, sampling conservador, tags de domínio como contrato e chapter como produto. Recusei: só APM (não vê TypeError no botão), sampling 100% (custo + ruído), `captureException` nu (sem dono), big bang nos quatro repos no mesmo dia, session replay sempre ligado.
 
 1. **Mapa de risco por frontend** - rotas de dinheiro e de jornada do seller primeiro; resto depois.
-2. **SDK em produção apenas**, sampling conservador, source maps no release. Padrão extraído em [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) (init, sampling, PII, tags).
+2. **SDK em produção apenas**, sampling conservador, source maps no release. Padrão extraído no próprio init: sampling, PII, tags - sem SDK cru.
 3. **Tags de domínio e fluxo** (`domain`, `flow`, faixa de valor sem PII) via `withScope` - nunca `captureException` nu.
 4. **PII masking** em `beforeSend`, `sendDefaultPii: false`. E-mail, documento, token: fora.
 5. **Chapter de frontend** - um guia, quatro mapas, ownership por repo. Enablement: o padrão sobrevive à minha agenda.
 6. Complemento a Grafana/APM, não substituição. Cada camada responde uma pergunta diferente.
-7. **Evidência no rito** - issue com release + breadcrumb vira input de postmortem, não lore. O molde está em [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
+7. **Evidência no rito** - issue com release + breadcrumb vira input de postmortem, não lore. Molde: timeline, evidência, ação com dono.
 
 ## Resultado / métricas
 

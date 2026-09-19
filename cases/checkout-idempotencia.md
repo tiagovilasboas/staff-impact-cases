@@ -1,5 +1,7 @@
 # Idempotência no checkout: race com webhook e vendas duplicadas
 
+**Papel.** Driver no caminho quente; guarda na API do pay e no webhook (duas superfícies). **Antes.** Dois writers sem guarda; janela ~10s; duplicata da classe. **Depois.** Classe eliminada; Redis `SET NX` 60s; ~10 testes. **Decisão.** Guarda durável + segundo guard; recusei só debounce no client. **Não medido neste texto.** volume financeiro de estorno; “zero duplicata para sempre”.
+
 ## Papel / período aproximado
 
 Staff / Tech Lead full stack no checkout de um marketplace de creators. Período aproximado: 2026.
@@ -37,7 +39,7 @@ Janela curta demais (ordem de 10s) falhava em checkout lento. Resultado: estorno
 3. **Segundo guard no webhook** - para subscription, casar `payment_request_id` + tipo, não só `transaction_id` nulo.
 4. **Bordas cobertas** - upsell paralelo (não colidir duas ofertas distintas), retry do gateway, ausência de `transaction_id`.
 5. **Testes** - da ordem de **10** unitários de concorrência / chave / TTL. Sem teste, a janela volta a 10s no próximo “hotfix urgente”.
-6. **Evidência no rito** - duplicata de dinheiro vira postmortem, não lore. O molde está em [staff-postmortem](https://github.com/tiagovilasboas/staff-postmortem).
+6. **Evidência no rito** - duplicata de dinheiro vira postmortem, não lore. Molde: timeline, evidência, ação com dono. Classe irmã: [ops-postmortems.md](ops-postmortems.md).
 
 ## Resultado / métricas
 
