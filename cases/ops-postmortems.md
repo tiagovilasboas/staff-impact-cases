@@ -1,5 +1,7 @@
 # Ops N3: dashboard diário e cultura blameless de postmortem
 
+**Papel.** Driver do sistema operacional N3; autor do molde blameless (glue work: rito + onboarding). **Antes.** Incidente pelo chamado; zero escrita no trimestre; onboarding era lore. **Depois.** Dashboard diário; ~15 postmortems em ~2 meses; push morto achado no painel. **Decisão.** Ritual + painel + gate de severidade; recusei heroísmo noturno. **Não medido neste texto.** taxa de incidente da casa; “zero recorrência” eterno.
+
 ## Papel / período aproximado
 
 Tech Lead / Staff de sustentação N3 - última linha antes do seller. Marketplace de creators. Período aproximado: 2026 (~primeiro trimestre de operação na cadeira).

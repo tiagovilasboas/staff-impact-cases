@@ -1,5 +1,7 @@
 # Idempotência no checkout: race com webhook e vendas duplicadas
 
+**Papel.** Driver no caminho quente; guarda na API do pay e no webhook (duas superfícies). **Antes.** Dois writers sem guarda; janela ~10s; duplicata da classe. **Depois.** Classe eliminada; Redis `SET NX` 60s; ~10 testes. **Decisão.** Guarda durável + segundo guard; recusei só debounce no client. **Não medido neste texto.** volume financeiro de estorno; “zero duplicata para sempre”.
+
 ## Papel / período aproximado
 
 Staff / Tech Lead full stack no checkout de um marketplace de creators. Período aproximado: 2026.

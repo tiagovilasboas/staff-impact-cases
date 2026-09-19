@@ -1,5 +1,7 @@
 # Observabilidade frontend: de ~900 catches silenciosos a Sentry em quatro fronts
 
+**Papel.** Driver do padrão (autor do chapter); consultor das squads de FE - quatro fronts, leverage de várias squads. **Antes.** Browser cego; ~900 catches silenciosos; PIX e upload no mesmo saco. **Depois.** Sentry em quatro projetos; tags de domínio; PII masking. **Decisão.** SDK só em produção + sampling conservador + chapter; recusei só APM e sampling 100%. **Não medido neste texto.** crash-free, “60% dos bugs”, MTTR final.
+
 ## Papel / período aproximado
 
 Staff / Tech Lead de sustentação, marketplace de creators e checkout de alto volume. Período aproximado: 2026.

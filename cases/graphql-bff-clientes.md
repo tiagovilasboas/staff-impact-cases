@@ -1,5 +1,7 @@
 # BFF GraphQL: dezenas de REST no client limitado viram uma query por tela
 
+**Papel.** Autor do BFF; driver para destravar o front frente ao legado. **Antes.** Dezenas de REST no device limitado; front espera o monolito. **Depois.** Uma query por tela; DataLoader no servidor; cache só de catálogo. **Decisão.** GraphQL BFF + DataLoader; recusei waterfall no device e federação. **Não medido neste texto.** RUM em ms e % de bytes da época.
+
 ## Papel / período aproximado
 
 Tech Lead / engenheiro sênior em **plataforma OTT**. Clientes: Smart TVs antigas e mobile em rede ruim. Período aproximado: 2019-2021.

@@ -1,5 +1,7 @@
 # Falha silenciosa de push: milhares sem notificação por ~30 dias
 
+**Papel.** Driver e autor do fix no N3. **Antes.** Milhares (~4k) sem push ~30 dias; HTTP 200 mentia. **Depois.** Canal restaurado; ~5 testes no erro; alerta no painel. **Decisão.** Fix + alerta + fallback; recusei hotfix sem sinal. **Não medido neste texto.** meta &lt;24h ainda é meta; vendor e token ficam fora.
+
 ## Papel / período aproximado
 
 Tech Lead N3, marketplace de creators. Período aproximado: 2026.

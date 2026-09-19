@@ -1,5 +1,7 @@
 # Feature flag de pagamentos: rollout de reembolso com kill-switch &lt; 30s
 
+**Papel.** Driver coordenando back de sellers e gateway (dois serviços, mesmo contrato). **Antes.** Big bang 100%; flag local a um processo. **Depois.** Default OFF; bucketing por seller; kill-switch &lt;30s. **Decisão.** Redis compartilhado + fail-closed; recusei SQL de um serviço só. **Não medido neste texto.** close-out financeiro do livro de reembolso. Contrafactual: big bang de dinheiro no deploy que não foi apostado.
+
 ## Papel / período aproximado
 
 Staff coordenando back de sellers e BFF/gateway de pagamentos. Período aproximado: 2026.

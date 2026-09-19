@@ -1,5 +1,7 @@
 # AppSec no BFF: auditoria estilo ASVS-L2 que bloqueou um go-live inseguro
 
+**Papel.** Driver do gate de go-live; autor do checklist L2 no BFF de pagamentos. **Antes.** Bearer frouxo, IDOR, CORS coringa; o calendário mandava ir. **Depois.** Go-live adiado até auth + CORS + IDOR fecharem; testes no pipeline. **Decisão.** Bloquear o ar; recusei ship-and-patch. **Não medido neste texto.** taxa de incidente de autorização; “zero achado L2” permanente. Contrafactual: superfície insegura que não foi a produção.
+
 ## Papel / período aproximado
 
 Staff com AppSec aplicada (curso de defesa cibernética em paralelo). Período aproximado: 2025-2026. Superfície: **BFF de pagamentos** na frente de um checkout de alto volume.
