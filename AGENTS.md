@@ -10,7 +10,7 @@ Este repo é **INDEX de evidência narrativa** para recrutador. Não é produto,
 cases/INDEX.md                         mapa de leitura
 cases/*.md                             um case por arquivo
 docs/inspiracao.md                     leitura externa (link only)
-docs/case-rubric.md                    problem / constraint / decision / evidence / outcome
+docs/case-rubric.md                    score: impact / depth / scope / unmeasured
 scripts/check-anonymization.py         CI: nomes/IDs proibidos
 scripts/check-md-links.py              CI: links, INDEX, anti-hub
 scripts/check-case-headings.py         CI: H2, restrição, decisão
@@ -24,6 +24,7 @@ README é mapa (tabela de cases na frente). Sem `## Purpose` / `## Propósito`. 
 - Escreva em **português do Brasil**, primeira pessoa (“Eu, Tiago Montanha…”).
 - Use rótulos genéricos: marketplace de creators, checkout de alto volume, BFF de pagamentos, plataforma OTT.
 - Separe **resultado observado** de **meta/alvo**. Se o número não for final medido, rotule `meta` ou `alvo`.
+- Abertura do case num fôlego: **Papel.** **Antes.** **Depois.** **Decisão.** `Não medido`. Score leverage, não volume de PR.
 - Arredonde métricas. Prefira ordem de grandeza a precisão falsa.
 - Mantenha autoria: Maintainer Tiago Montanha · Staff · `@tiagovilasboas`.
 

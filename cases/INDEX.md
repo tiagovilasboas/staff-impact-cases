@@ -2,7 +2,7 @@
 
 Corpus Staff em PT-BR, primeira pessoa. Empregadores genéricos. Métricas: **resultado** (observado) vs **meta/alvo** (rotulado quando não for final medido). Este INDEX é evidência narrativa para recrutador, não um produto.
 
-Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspiracao.md). Rubrica (problem, constraint, decision, evidence, outcome): [docs/case-rubric.md](../docs/case-rubric.md).
+Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspiracao.md). Rubrica (impacto / profundidade / escopo / decisão + não medido): [docs/case-rubric.md](../docs/case-rubric.md).
 
 | # | Arquivo | Tema | Período aprox. |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ Leitura de cases da indústria (link only): [docs/inspiracao.md](../docs/inspira
 
 ## Como usar este INDEX
 
-1. Recrutador: leia o título + resultado; abra o arquivo se quiser o “como”.
-2. Agent: não complete lacunas com nomes de empresa. Se faltar evidência, escreva `desconhecido`. Não invente métrica para fechar meta.
+1. Recrutador: leia a abertura (Papel / Antes / Depois / Decisão / Não medido); abra o arquivo se quiser o “como”.
+2. Agent: não complete lacunas com nomes de empresa. Se faltar evidência, escreva `desconhecido`. Não invente métrica para fechar meta. Score leverage, não volume de PR.
 3. Eu: um case novo = um arquivo + uma linha aqui + uma linha no README + uma linha em [`llms.txt`](../llms.txt).
 4. Este mapa se lê sozinho. Não encaminhe o leitor para um zoo de repositórios irmãos.

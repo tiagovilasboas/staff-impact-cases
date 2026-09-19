@@ -24,10 +24,16 @@ Mapa: [`cases/INDEX.md`](cases/INDEX.md). Rubrica Staff: [`docs/case-rubric.md`]
 
 ## Como ler
 
-1. Recrutador: título + uma linha; abra o arquivo se quiser o “como”.
-2. Números: **resultado** (observado) vs **meta/alvo** (ainda não fechado neste texto).
-3. Empregadores genéricos. Sem ticket, DSN, host interno, wiki privada.
-4. Técnicas públicas (ASVS, espírito SRE) podem aparecer no case. Este INDEX não encaminha para um zoo de repositórios irmãos.
+Score o case com a [rubrica](docs/case-rubric.md). Não some PRs, linhas ou reuniões.
+
+1. **Impacto de negócio / org** - dinheiro, PII, seller, conversão, ou contrafactual honesto (o incidente / go-live que **não** aconteceu).
+2. **Profundidade técnica** - restrição, complexidade, rollback, evidência (teste, ADR em prosa, rito).
+3. **Escopo** - times ou superfícies tocados; papel no rito (**autor**, **driver**, **consultor**).
+4. **Decisão + limite** - o que foi aceito vs recusado, e o que **não foi medido** neste texto (meta/alvo).
+
+Frase útil: iniciativa → impacto de negócio → meu papel → times. A abertura de cada case cabe num fôlego (**Papel.** **Antes.** **Depois.** **Decisão.** **Não medido.**). Depois vem o “como”.
+
+Empregadores genéricos. Sem ticket, DSN, host interno. Técnicas públicas (ASVS, espírito SRE) podem aparecer. Este INDEX não encaminha para um zoo de repositórios irmãos.
 
 ## Autoria
 
