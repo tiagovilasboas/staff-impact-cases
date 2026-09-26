@@ -17,7 +17,7 @@ Maintainer: [Tiago Montanha](https://github.com/tiagovilasboas) · Staff · [`@t
 | [Ops e postmortems](cases/ops-postmortems.md) | Dashboard N3 + ~15 postmortems; before/after |
 | [Idempotência no checkout](cases/checkout-idempotencia.md) | Race checkout/webhook; before/after; duplicatas da classe |
 | [Feature flag de pagamentos](cases/feature-flag-pagamentos.md) | Kill-switch &lt;30s; before/after; fail-closed |
-| [Falha silenciosa de push](cases/falha-silenciosa-notificacoes.md) | Milhares sem notificação ~30 dias; alerta + fallback |
+| [Falha silenciosa de push](cases/falha-silenciosa-notificacoes.md) | Parte dos sellers sem notificação ~30 dias; alerta + fallback |
 | [BFF GraphQL](cases/graphql-bff-clientes.md) | Dezenas de REST → um BFF; before/after; client limitado |
 
 Mapa: [`cases/INDEX.md`](cases/INDEX.md). Rubrica Staff: [`docs/case-rubric.md`](docs/case-rubric.md). Índice máquina: [`llms.txt`](llms.txt).
