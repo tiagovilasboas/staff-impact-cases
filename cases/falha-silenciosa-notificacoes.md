@@ -1,6 +1,6 @@
-# Falha silenciosa de push: milhares sem notificação por ~30 dias
+# Falha silenciosa de push: parte dos sellers sem notificação por ~30 dias
 
-**Papel.** Driver e autor do fix no N3. **Antes.** Milhares (~4k) sem push ~30 dias; HTTP 200 mentia. **Depois.** Canal restaurado; ~5 testes no erro; alerta no painel. **Decisão.** Fix + alerta + fallback; recusei hotfix sem sinal. **Não medido neste texto.** meta &lt;24h ainda é meta; vendor e token ficam fora.
+**Papel.** Driver e autor do fix no N3. **Antes.** Parte dos sellers sem push por ~30 dias; HTTP 200 mentia. **Depois.** Canal restaurado; ~5 testes no erro; alerta no painel. **Decisão.** Fix + alerta + fallback; recusei hotfix sem sinal. **Não medido neste texto.** meta &lt;24h ainda é meta; vendor e token ficam fora.
 
 ## Papel / período aproximado
 
@@ -14,7 +14,7 @@ Push é o canal de “sua venda caiu / seu saque saiu”. Quando morre sem erro,
 
 ## Problema
 
-Uma coorte grande - **milhares** de sellers (ordem de quatro mil, arredondado) - ficou **~30 dias** sem push. HTTP aparentava sucesso. Causa composta:
+Uma fatia relevante dos sellers ficou **~30 dias** sem push. HTTP aparentava sucesso. Causa composta:
 
 1. **API do provedor deprecada** / enforcement de autenticação que o client antigo não mandava.
 2. **Sem checagem de falha** no client - não se lia “failed” no response; catch vazio ou `true` otimista.
@@ -26,7 +26,7 @@ Padrão sistêmico #1 daquele trimestre: falha silenciosa em integração extern
 | Dimensão | Antes (observado) |
 | --- | --- |
 | Entrega de push | HTTP 200 no *nosso* server; seller sem notificação |
-| Coorte | Milhares (~4k arredondado), ~30 dias |
+| Coorte | Uma fatia relevante dos sellers, ~30 dias |
 | Alerta de entrega | Ausente |
 | Teste no caminho de falha | 0 |
 | Onde achei | Dashboard N3, não a fila de tickets |
@@ -46,7 +46,7 @@ Padrão sistêmico #1 daquele trimestre: falha silenciosa em integração extern
 
 | Sinal | Antes | Depois | Rótulo |
 | --- | --- | --- | --- |
-| Sellers sem push | milhares, ~30 dias | Canal restaurado após o deploy | **Resultado** |
+| Sellers sem push | parte da base, ~30 dias | Canal restaurado após o deploy | **Resultado** |
 | Tempo até detectar essa classe | semanas a **meses** no pior irmão de integração | **Meta:** &lt;24h via dashboard + alerta | meta |
 | Testes no caminho de erro | 0 | ~5 | **Resultado** |
 | Recorrência da mesma deprecação | possível | alerta + health de integração | **alvo** de não repetir cego |
